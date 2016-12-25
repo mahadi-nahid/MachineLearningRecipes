@@ -26,8 +26,8 @@ categories = [
    'politics'
 ]
 
-train_path = r"E:\Projects and Codes\ML\NeuralNet\NeuralNetPractice\train"
-test_path =  r"E:\Projects and Codes\ML\NeuralNet\NeuralNetPractice\test"
+train_path = r"E:\Projects and Codes\ML\MachineLearningRecipes\TextClassification\train"
+test_path =  r"E:\Projects and Codes\ML\MachineLearningRecipes\TextClassification\test"
 
 # ============================= loading training data and transforming it ================================== #
 
@@ -79,15 +79,26 @@ x_test_tfidf = -1
 #clf.fit(x_train, y_train)
 #clf.score_samples(x_test)
 
-
+from sklearn.metrics import accuracy_score
 #print y_test
 
 clf = tree.DecisionTreeClassifier()
 
 clf = clf.fit(x_train, y_train)
 
-print clf.predict(x_test)
+prediction = clf.predict(x_test)
+print "DT Accuracy  : ", accuracy_score(y_test, prediction)
 
-print y_test
+#Classify using KNN
+#from sklearn.neighbors import KNeighborsClassifier
+#
+#clf = KNeighborsClassifier();
+#
+#clf = clf.fit(x_train, y_train)
+#prediction = clf.predict(x_test)
+#
+##print prediction accuracy 
+#print "KNN Accuracy  : ", accuracy_score(y_test, prediction)
 
-print clf.score
+
+#My own Classifier 
