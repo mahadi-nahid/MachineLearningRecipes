@@ -21,7 +21,7 @@ y = iris.target
 #Splitting the training and test set
 
 from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = .5)
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = .3)
 
 
 #Classify using DecissionTee
@@ -31,11 +31,10 @@ clf = tree.DecisionTreeClassifier()
 clf.fit(X_train,y_train)
 prediction = clf.predict(X_test)
 
-#print prediction
+#print prediction accuracy 
 
 
 from sklearn.metrics import accuracy_score
-
 print "DecissionTree Accuracy : ", accuracy_score(y_test, prediction)
 
 
@@ -46,14 +45,13 @@ clf = KNeighborsClassifier();
 clf.fit(X_train,y_train)
 prediction = clf.predict(X_test)
 
-#print prediction
-
+#print prediction accuracy 
 
 from sklearn.metrics import accuracy_score
-
 print "KNN Accuracy  : ", accuracy_score(y_test, prediction)
 
 
+#My own Classifier 
 
 def classify(features):
     pass
