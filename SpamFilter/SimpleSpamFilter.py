@@ -19,19 +19,25 @@ NEWLINE = '\n'
 HAM = 'ham'
 SPAM = 'spam'
 
+#SOURCES = [
+#    ('data/spam',        SPAM),
+#    ('data/easy_ham',    HAM),
+#    ('data/hard_ham',    HAM),
+#    ('data/beck-s',      HAM),
+#    ('data/farmer-d',    HAM),
+#    ('data/kaminski-v',  HAM),
+#    ('data/kitchen-l',   HAM),
+#    ('data/lokay-m',     HAM),
+#    ('data/williams-w3', HAM),
+#    ('data/BG',          SPAM),
+#    ('data/GP',          SPAM),
+#    ('data/SH',          SPAM)
+#]
+
+
 SOURCES = [
     ('data/spam',        SPAM),
-    ('data/easy_ham',    HAM),
-    ('data/hard_ham',    HAM),
-    ('data/beck-s',      HAM),
-    ('data/farmer-d',    HAM),
-    ('data/kaminski-v',  HAM),
-    ('data/kitchen-l',   HAM),
-    ('data/lokay-m',     HAM),
-    ('data/williams-w3', HAM),
-    ('data/BG',          SPAM),
-    ('data/GP',          SPAM),
-    ('data/SH',          SPAM)
+    ('data/ham',    HAM)
 ]
 
 SKIP_FILES = {'cmds'}
