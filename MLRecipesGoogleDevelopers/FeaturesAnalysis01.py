@@ -20,3 +20,4 @@ lab_height = 24 + 4 * np.random.randn(labs)
 
 plt.hist([grey_height, lab_height], stacked = True, color=['r', 'b'])
 plt.show()
+
