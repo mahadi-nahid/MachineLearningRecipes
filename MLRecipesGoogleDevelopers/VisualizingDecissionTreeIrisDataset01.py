@@ -52,32 +52,19 @@ print test_target
 
 # viz code for visualizing the decission tree 
 
-from sklearn.externals.six import StringIO
-import pydot 
-
-dot_data = StringIO()
-tree.export_graphviz(clf, 
-                     out_file = dot_data,
-                     feature_names = iris.feature_names, 
-                     class_name = iris.target_names, 
-                     filled = True, rounded = True, 
-                     impurity = False)
-
-graph = pydot.graph_from_dot_data(dot_data.getvalue())
-graph.write_pdf("irisTree.pdf")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#from sklearn.externals.six import StringIO
+#import pydot 
+#
+#dot_data = StringIO()
+#tree.export_graphviz(clf, 
+#                     out_file = dot_data,
+#                     feature_names = iris.feature_names, 
+#                     class_name = iris.target_names, 
+#                     filled = True, rounded = True, 
+#                     impurity = False)
+#
+#graph = pydot.graph_from_dot_data(dot_data.getvalue())
+#graph.write_pdf("irisTree.pdf")
+#
+#
+#
