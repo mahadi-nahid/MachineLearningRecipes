@@ -123,24 +123,37 @@ with open('input.txt') as inputfile:
 #-----------------------------------------------------------------------------------
 x_train_list = []
 
-for data in X_train[355]: 
-    print("data: ", data)
+for data in X_train: 
+    #print("data: ", data)
     x_test_counts = count_vect.transform(data)
     x_test_tfidf = tfidf_transformer.transform(x_test_counts)
     x_test = x_test_tfidf.toarray()
     x_test = scaler.transform(x_test)
     x_train_list.append(x_test)
 
-print("x_train_list: ", x_train_list)
-print("y_train: ", y_train[355])
+#print("x_train_list: ", x_train_list)
+#print("y_train: ", y_train[355])
+
+
 x_test_list = []
 
-for data in testData[5]: 
-    print("data: ", data)
+for data in testData: 
+    #print("data: ", data)
     x_test_counts = count_vect.transform(data)
     x_test_tfidf = tfidf_transformer.transform(x_test_counts)
     x_test = x_test_tfidf.toarray()
     x_test = scaler.transform(x_test)
     x_test_list.append(x_test)
 
-print("x_test_list: ", x_test_list)
+#print("x_test_list: ", x_test_list)
+
+#------------------------------------------------------------------------------
+
+#print y_test
+
+clf = tree.DecisionTreeClassifier()
+
+clf = clf.fit(x_train_list, y_train)
+
+prediction = clf.predict(x_test_list)
+
