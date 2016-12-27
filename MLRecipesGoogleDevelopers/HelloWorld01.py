@@ -32,7 +32,7 @@ labels = ["apple", "apple", "orange", "orange"]
 #we can use numerical values rather than string .. sklearn uses real valued features
 #let's say smoot === 1, and bumpy === 0 and apple ==== 0, orange === 1
 features = [[140, 1], [130, 1], [150, 0], [170, 0]]
-labels = [0, 0, 1, 1]
+#labels = [0, 0, 1, 1]
 
 #step2: Define a classifier. in this case we use Decission Tree Classifier 
 clf = tree.DecisionTreeClassifier()

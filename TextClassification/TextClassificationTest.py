@@ -87,6 +87,7 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(x_train, y_train)
 
 prediction = clf.predict(x_test)
+print("prediction : ", prediction)
 print "DT Accuracy  : ", accuracy_score(y_test, prediction)
 
 #Classify using KNN
